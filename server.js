@@ -15,10 +15,8 @@ const clarifaiApp = new clarifai.App({
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'ybspostgres',
-      database : 'smartbrains'
+      connectionString: process.env.DATABASE_URL,
+      ssl: true,
     }
   });
 
