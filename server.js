@@ -22,9 +22,8 @@ const db = knex({
     }
   });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`app is running on port ${PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 })
 
 app.post('/signin', (req,res) => {
