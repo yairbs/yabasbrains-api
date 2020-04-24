@@ -28,7 +28,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.get('/', (req,res) => {
     res.json("WORKING");
-}
+})
 
 app.post('/signin', (req,res) => {
     const {email, password} = req.body;
